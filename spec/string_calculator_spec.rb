@@ -21,7 +21,11 @@ RSpec.describe StringCalculator do
 				string_calculator = StringCalculator.new
 				expect(string_calculator.add("2,3")).to eq(5)
 		    end
-		end
 
+		    it 'returns sum for non-empty string with comma separated numbers or separated with \n' do
+				string_calculator = StringCalculator.new
+				expect(string_calculator.add("1,2\n3")).to eq(6)
+		    end
+		end
 	end
 end
