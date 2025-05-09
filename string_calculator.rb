@@ -1,5 +1,8 @@
 class StringCalculator
 	def add(input)
 		return 0 if input.empty?
+
+		split_array = input.split(',')
+		return split_array.map(&:to_i).sum
 	end
 end

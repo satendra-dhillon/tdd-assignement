@@ -11,6 +11,11 @@ RSpec.describe StringCalculator do
 		end
 
 		context 'when input is not empty stirng' do
+
+			it 'returns sum for non-empty string with comma separated number' do
+				string_calculator = StringCalculator.new
+				expect(string_calculator.add("2,3")).to eq(5)
+		    end
 		end
 
 	end
